@@ -17,7 +17,7 @@ A beautifully designed and feature-rich To-Do List application that helps you st
 
 ## **📸 Screenshots**
 
-![To-Do List Preview](https://via.placeholder.com/800x400?text=Add+your+screenshot+here)  
+![To-Do List Preview](ScreenShot.jpg)  
 *Your sleek and organized to-do list in action!*
 
 ---
