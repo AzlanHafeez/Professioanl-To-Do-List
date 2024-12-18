@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: auto;
+    width: 100vw;
+    transition: 0.3s;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.5) 60%), url(Images/main-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    flex-direction: column;
+    gap: 130px;
+}
+
+#myInput {
+    width: 40%;
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid #928f8f;
+    color: #ddd;
+    font-family: "poppins", serif;
+    border-radius: 150px;
+}
+
+#myInput::placeholder {
+    color: #ddd;
+}
+
+/* Updated .cards to handle multiple rows */
+.cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensures cards wrap to the next row */
+    gap: 17px;
+    /* Adds space between cards */
+    justify-content: flex-start;
+    /* Aligns cards to the left */
+    padding: 32px;
+}
+
+.card {
+    width: calc(20% - 17px);
+    /* Allows 5 cards in one row with gaps */
+    height: 14rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #928f8f;
+    /* Optional: Add a border for better visuals */
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    /* Space between heading and description */
+}
+
+.card:hover {
+    background-color: #928f8f;
+    color: #fff;
+    /* Optional: Text color change on hover */
+}
+
+.modal-body h1 {
+    text-align: center;
+    color: #ddd;
+    background-color: #928f8f;
+}
+
+.modal-body {
+    background-color: #928f8f;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(33.33% - 17px);
+        /* 3 cards per row on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(50% - 17px);
+        /* 2 cards per row on mobile */
+    }
+
+    #myInput {
+        width: 70%;
+        /* Adjust search bar width for smaller screens */
+    }
+}
